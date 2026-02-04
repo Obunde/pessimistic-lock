@@ -1,20 +1,20 @@
-<h1>発注一覧</h1>
+<h1>Order List</h1>
 
 <% if !@orders.present? %>
-  <p>注文した商品はありません。</p>
+  <p>You have no ordered items.</p>
 <% end %>
 
 <% @orders.each do |order| %>
   <p>
-    <strong>発注日時:</strong>
+    <strong>Order Date & Time:</strong>
     <%= order.created_at.strftime("%m/%d %H:%M") %>
   </p>
 
   <table border=1>
     <thead>
       <tr>
-        <td width=100px>商品名</td>
-        <td>注文数</td>
+        <td width=100px>Product Name</td>
+        <td>Quantity Ordered</td>
       </tr>
     </thead>
     <tbody>
